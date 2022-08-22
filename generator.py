@@ -13,7 +13,7 @@ parameters = {
 
 
 ###################
-emailFile = "acc.json"
+emailFile = "accounts.json"
 ###################
 
 import os
