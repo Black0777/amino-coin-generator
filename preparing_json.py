@@ -6,7 +6,7 @@ finally: import aminofix
 
 
 ################
-savePath = "acc.json"
+savePath = "accounts.json"
 #############
 
 
