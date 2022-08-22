@@ -233,7 +233,7 @@ class App:
             for acc in Config().account_list:
                 e = acc['email']
                 p = acc['password']
-                d = acc['device']
+                d = acc['deviceId']
                 self.generation(e, p, d)
 
 if __name__ == "__main__":
