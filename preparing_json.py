@@ -37,7 +37,7 @@ print(
 Format = {
     "email": None,
     "password": None,
-    "device": None,
+    "deviceId": None,
     "uid": None,
     "sid": None
 }
@@ -50,7 +50,7 @@ def show_accounts():
 def get_data(
     email: str=None,
     password=None,
-    device: str=None,
+    deviceId: str=None,
     uid: str=None,
     sid: str=None
 ) -> dict:
@@ -63,13 +63,13 @@ def get_data(
 accounts = []
 while True:
     email, password = None, None
-    device, sid, uid = None, None, None
+    deviceId, sid, uid = None, None, None
     show_accounts()
     email = input("~ Email: ")
     password = input("~ Password: ")
     with suppress(Exception):
         amino = aminofix.Client()
-        device = amino.device_id
+        deviceId = amino.device_id
         amino.login(email, password)
         sid = amino.sid
         uid = amino.userId
@@ -77,7 +77,7 @@ while True:
     data = get_data(
         email=email,
         password=password,
-        device=device,
+        deviceId=deviceId,
         sid=sid,
         uid=uid
     )
